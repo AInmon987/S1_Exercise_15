@@ -63,7 +63,7 @@ window.addEventListener("load", function () {
 });
 
 window.addEventListener("load", function () {
-      document.getElementById("setButton").onclick = runSubmit;
+      document.getElementById("subButton").onclick = runSubmit;
       document.getElementById("cardName").oninput = validateName;
       document.getElementById("expMonth").onchange = validateMonth;
       document.getElementById("expYear").onchange = validateYear;
@@ -161,15 +161,15 @@ function sumDigits(numStr) {
 function luhn(idNum) {
       var string1 = "";
       var string2 = "";
-      //retreive the odd number digits
+      //retrieve the odd number digits
       for (var i = idNum.length - 1; i >= 0; i -= 2) {
             string1 += idNum.charAt(i);
       }
 
-      //retreive the even number digits
+      //retrieve the even number digits
       for (var i = idNum.length - 2; i >= 0; i -= 2) {
             string2 += 2 * idNum.charAt(i);
       }
-      //retreive whether the sum of the digits is divisable by 10
+      //retrieve whether the sum of the digits is divisible by 10
       return sumDigits(string1 + string2) % 10 === 0;
 }
